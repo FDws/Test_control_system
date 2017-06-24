@@ -1,0 +1,7 @@
+#!/bin/bash
+
+server=(`ps -ef | grep teacher.sh | grep -v grep`)
+if [ ${#server[@]} -ne 0 ]
+then
+	echo $USER > /tmp/notice
+fi
